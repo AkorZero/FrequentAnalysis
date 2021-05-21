@@ -49,7 +49,14 @@ int main()
 
 	cout << "Original: " << o_len << endl;
 
-	
+	int n_len = 0;
+
+	for (pair<char, string> it : t)
+	{
+		n_len += freq[it.first] * it.second.length();
+	}
+
+	cout << "New: " << n_len << endl;
 
 	system("pause");
 	return 0;
